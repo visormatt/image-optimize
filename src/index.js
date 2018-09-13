@@ -10,7 +10,7 @@ import Jimp from 'jimp';
 import { IMAGE_EXTENSIONS, SIZE_ARRAY } from './settings';
 
 const optimizeImages = async (path) => {
-  const files = await imagemin([`${path}*.{jpg,png}`], 'images/optmized', {
+  const files = await imagemin([`${path}*.{jpg,png}`], 'images/optimized', {
     plugins: [
       imageminJpegtran({
         // progressive: true

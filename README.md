@@ -1,9 +1,21 @@
 ## Images
 
-> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+> The inspiration for this repo comes from the `<picture>` element which offers us a bit more flexibility to serve more sensible images based on any valid media query that would normally be defined in a CSS.
 
 **Links / Resources:**
 
-- https://images.guide/
-- https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf
-- https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/
+- [Image Optimization Guide](https://images.guide)
+- [Preload & Prefetch](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf)
+- [Preload Link](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for)
+
+### Usage:
+
+Overall this tool is rather simple. Just do your standard `npm intall`, drop some images into the `images` folder and run from the CLI. This will create two sub-folders `(optimized|resized)` containing the newly scaled and optimized images.
+
+```bash
+# Install
+npm i
+
+# Buid the images
+npm start
+```
