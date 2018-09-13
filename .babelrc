@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    "@babel/plugin-proposal-async-generator-functions"
+  ],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        }
+      }
+    ]
+  ]
+}
