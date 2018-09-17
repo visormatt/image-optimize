@@ -3,21 +3,43 @@ import chalk from 'chalk';
 import fs from 'fs';
 import imagemin from 'imagemin';
 import imageminJpegtran from 'imagemin-jpegtran';
+import imageminMozjpeg from 'imagemin-mozjpeg';
 import imageminPngquant from 'imagemin-pngquant';
+import imageminWebp from 'imagemin-webp';
+import imageminZopfli from 'imagemin-zopfli';
 import Jimp from 'jimp';
 
 // Internal
 import { IMAGE_EXTENSIONS, SIZE_ARRAY } from './settings';
 
 const optimizeImages = async (path) => {
-  const files = await imagemin([`${path}*.{jpg,png}`], 'images/optimized', {
+  await imagemin([`${path}*.{jpg,png}`], 'images/optimized', {
     plugins: [
-      imageminJpegtran({
-        // progressive: true
+      // imageminJpegtran({
+      //   progressive: true
+      // }),
+
+      // imageminPngquant({
+      //   quality: '65-80'
+      // }),
+
+      // https://goo.gl/uFNzki
+      imageminMozjpeg({
+        progressive: true
       }),
 
-      imageminPngquant({
-        quality: '80-100'
+      // https://goo.gl/TTTM5p
+      imageminZopfli({
+        more: true
+      })
+    ]
+  });
+
+  await imagemin([`${path}*.{jpg,png}`], 'images/webp', {
+    plugins: [
+      // https://goo.gl/BrLs8W
+      imageminWebp({
+        quality: 80
       })
     ]
   });
@@ -50,7 +72,7 @@ const resizeImage = (path, file) => {
         } else {
           const notice = `scaled to ${width}px.`;
           image.resize(width, Jimp.AUTO)
-            .quality(quality)
+            // .quality(quality)
             .write(`${path}resized/${filename}`);
 
           console.log('✅', chalk.greenBright(filename), notice);

@@ -25,6 +25,9 @@
     "@babel/core": "^7.0.1",
     "@babel/plugin-proposal-async-generator-functions": "^7.0.0",
     "@babel/plugin-transform-regenerator": "^7.0.0",
-    "@babel/preset-env": "^7.0.0"
+    "@babel/preset-env": "^7.0.0",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-webp": "^4.1.0",
+    "imagemin-zopfli": "^5.1.0"
   }
 }
