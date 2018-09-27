@@ -2,39 +2,39 @@ pipeline {
   agent none
 
   stages {
-    stage('Prepare') {
+    stage('🛠 Prepare') {
       parallel {
         stage('Test') {
           steps {
-            echo "♻️ Running test suites"
+            echo "Running test suites"
           }
         }
 
         stage ('Build') {
           steps {
-            echo "🛠 Building Docker image"
+            echo "Building Docker image"
           }
         }
       }
     }
 
-    stage ('Publish') {
+    stage ('📦 Publish') {
       when {
         branch 'master'
       }
 
       steps {
-        echo "📦 Publishing to NPM"
+        echo "Publishing to NPM"
       }
     }
 
-    stage ('Deploy') {
+    stage ('🌎 Deploy') {
       when {
         branch 'master'
       }
 
       steps {
-        echo "🌎 Deploying to Production"
+        echo "Deploying to Production"
       }
     }
   }
