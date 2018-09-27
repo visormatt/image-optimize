@@ -2,15 +2,15 @@ pipeline {
   agent none
 
   stages {
-    stage('🛠 Prepare') {
+    stage('👀 Setup') {
       parallel {
-        stage('Test') {
+        stage('♻️ Test') {
           steps {
             echo "Running test suites"
           }
         }
 
-        stage ('Build') {
+        stage ('🛠 Build') {
           steps {
             echo "Building Docker image"
           }
