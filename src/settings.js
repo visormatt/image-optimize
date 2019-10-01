@@ -1,27 +1,28 @@
-const IMAGE_EXTENSIONS = ['gif', 'jpg', 'jpeg', 'png'];
-const SIZE_ARRAY = [{
-  ext: 'extra-large',
-  quality: 100,
-  width: 3840
-}, {
-  ext: 'large',
-  quality: 100,
-  width: 2560
-}, {
-  ext: 'medium',
-  quality: 100,
-  width: 1280
-}, {
-  ext: 'small',
-  quality: 100,
-  width: 640
-}, {
-  ext: 'thumb',
-  quality: 100,
-  width: 320
-}];
-
-export {
-  IMAGE_EXTENSIONS,
-  SIZE_ARRAY
-};
+export const IMAGE_EXTENSIONS = ["gif", "jpg", "jpeg", "png"];
+export const IMAGE_SIZES = [
+  {
+    ext: "3840",
+    quality: 100,
+    width: 3840
+  },
+  {
+    ext: "2560",
+    quality: 100,
+    width: 2560
+  },
+  {
+    ext: "1280",
+    quality: 100,
+    width: 1280
+  },
+  {
+    ext: "640",
+    quality: 100,
+    width: 640
+  },
+  {
+    ext: "320",
+    quality: 100,
+    width: 320
+  }
+];

@@ -12,22 +12,22 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
+    "@babel/polyfill": "^7.6.0",
     "chalk": "^2.4.2",
-    "imagemin": "^6.1.0",
-    "imagemin-jpegtran": "^5.0.2",
-    "imagemin-pngquant": "^6.0.1",
-    "imageoptim-cli": "^2.3.7",
-    "jimp": "^0.4.0"
+    "imagemin": "^7.0.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "imagemin-webp": "^5.1.0",
+    "imagemin-zopfli": "^6.0.0",
+    "imageoptim-cli": "^3.0.0",
+    "jimp": "^0.8.4"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.0",
-    "@babel/core": "^7.5.4",
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
     "@babel/plugin-proposal-async-generator-functions": "^7.2.0",
     "@babel/plugin-transform-regenerator": "^7.4.5",
-    "@babel/preset-env": "^7.5.4",
-    "imagemin-mozjpeg": "^7.0.0",
-    "imagemin-webp": "^4.1.0",
-    "imagemin-zopfli": "^5.1.0"
+    "@babel/preset-env": "^7.6.2"
   }
 }
